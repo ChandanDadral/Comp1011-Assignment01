@@ -30,25 +30,47 @@ public class Hero{
 		this.health = (int)(Math.random() * 100 + 1);
 	}
 	
+	//
 	public void fight() {
 		if(hitAttempt()==true){
+			System.out.println(this.name + " attcked and did damage");
 			
+		}
+		
+		else{
+			System.out.println(this.name + " missed the attack.. Better Luck Next time");
 		}
 		hitAttempt();
 	}
 	
+	//
 	public boolean hitAttempt(){
 		
-		if(Math.random()*10  >= 8){
+		if((int)Math.random()*10  >= 8){
 		
 			return true;
-	}
+		}
 		else {
 		
 			return false;
 		}
 		
 	}
+	
+	//
+	public int hitDamage(){
+		
+		int damageOccur=0;
+		int damageSuffer=0;
+		
+		damageOccur = (int)(Math.random()*6 +1);
+		damageSuffer = this.strength + damageOccur;
+		return damageSuffer;
+		
+		
+	}
+	
+	
 	
 	
 	
