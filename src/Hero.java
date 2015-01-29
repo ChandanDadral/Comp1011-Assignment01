@@ -1,8 +1,8 @@
 /**
  * @author Chandan Dadral
  * Program Description: Creating Hero Class with generating random abilities to Hero 
- * and performing fight and damage.
- * @version: 1.1 (January 24, 2015)
+ * and performing fight and damage. Also Displaying the Abilities on the Screen.
+ * @version: 1.2 (January 25, 2015) 
  */
 
 public class Hero{
@@ -45,7 +45,10 @@ public class Hero{
 	 */
 	private boolean hitAttempt(){
 		
-		if(Math.random()*10 >= 8){
+		int randomNumber; //created a variable which generate random number of 20% probability
+		randomNumber= (int)(Math.random()*10+1);
+		
+		if(randomNumber >= 8){
 			
 			return true;
 		}
@@ -56,6 +59,7 @@ public class Hero{
 	}
 	/**
 	 * This methods calculated how much damage occurs if hero hits
+	 * It is Calculated by Multiplying the Strength with Random Number
 	 * @return damageSuffer 
 	 */
 	private int hitDamage(){
@@ -76,14 +80,13 @@ public class Hero{
 	 */
 	public void fight() {
 		if(hitAttempt()==true){
-			System.out.println(this.name + " attacked and did damage of "+ hitDamage() );
+			System.out.println(this.name + " attacked");
+			System.out.println( this.name + " did damage of "+ hitDamage());
 			
 		}
-		
 		else{
 			System.out.println(this.name + " missed the attack.. Better Luck Next time");
 		}
-		
 	}
 	
 	/**

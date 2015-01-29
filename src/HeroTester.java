@@ -5,7 +5,7 @@
 /**
  * @author Chandan Dadral
  * Program Description: This class test the Hero class and check it's functionality 
- *@version: 0.1 (January 24, 2015)
+ *@version: 1.2 (January 24, 2015)
  *
  */
 public class HeroTester {
@@ -19,7 +19,6 @@ public class HeroTester {
 		
 		Hero Ronaldo = new Hero("Ronaldo");
 		
-
 		Ronaldo.show(); 	
 		Ronaldo.fight();
 	}
