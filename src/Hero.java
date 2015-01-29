@@ -40,7 +40,7 @@ public class Hero{
 	
 	/**
 	 * This method generates random possibilities so that hero can hit of or
-	 * which is 20 % chances 
+	 * which is 20 % chances that hero can hit  
 	 * @return true or false
 	 */
 	private boolean hitAttempt(){
@@ -48,7 +48,7 @@ public class Hero{
 		int randomNumber; //created a variable which generate random number of 20% probability
 		randomNumber= (int)(Math.random()*10+1);
 		
-		if(randomNumber >= 8){
+		if(randomNumber > 8){
 			
 			return true;
 		}
